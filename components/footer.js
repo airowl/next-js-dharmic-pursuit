@@ -1,7 +1,14 @@
 export default function Footer(){
     return (
         <footer>
-            ciao sono Footer
+            <div>
+                <h1>
+                    Weekly wisdom in your inbox
+                </h1>
+            </div>
+            <div>
+                bottom
+            </div>
         </footer>
     );
 }

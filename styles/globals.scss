@@ -1,9 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: antiquewhite;
 }
 
 a {
@@ -14,6 +20,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.see{
+  border: 1px solid red;
+}
+
 
 /*@media (prefers-color-scheme: dark) {
   html {
