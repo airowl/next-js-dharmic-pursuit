@@ -14,14 +14,17 @@ export default function Header(){
     }
 
     return (
-        <header className="container mx-auto flex justify-between px-10 py-5 see">
-            <div className="">
-                Logo
-            </div>
-            <div className="space-y-2 cursor-pointer" onClick={hamClick}>
-                <div className="w-8 h-0.5 bg-gray-600"></div>
-                <div className="w-8 h-0.5 bg-gray-600"></div>
-                <div className="w-8 h-0.5 bg-gray-600"></div>
+        <header>
+            <div className="container see">
+                <div className="logo">
+                    LOGO
+                </div>
+
+                <div className="hamburger" onClick="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </header>
     );

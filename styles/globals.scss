@@ -1,23 +1,87 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './variables';
+@import './mixins';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '~bootstrap/scss/bootstrap.scss';
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: antiquewhite;
+body{
+  font-family: 'Poppins', sans-serif;
+
+  //@include respond-to(small){
+  //    width: 100vw;
+  //}
 }
 
-a {
-  color: inherit;
+
+h1.xlg{
+  font-size: $r-font-xlg;
+
+  @include respond-to(medium){
+      font-size: $font-xlg;
+  }
+}
+
+h2.lg{
+  font-size: $r-font-lg;
+
+  @include respond-to(medium){
+      font-size: $font-lg;
+  }
+}
+
+h3.md{
+  font-size: $r-font-md;
+
+  @include respond-to(medium){
+      font-size: $font-md;
+  }
+}
+
+p{
+  font-size: $r-font-sml;
+  line-height: 2;
+
+  @include respond-to(medium){
+      font-size: $font-sml;
+  }
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
   text-decoration: none;
+  font-size: $r-font-sml;
+  display: inline-block;
 }
 
-* {
+a.btn{
+  border-radius: 4px;
+  color: $font-color;
+}
+
+a.first-btn{
+  padding: .70rem 3.25rem;
+  background-color: $third-color;
+}
+
+a.second-btn{
+  padding: .70rem 1.31rem;
+  background-color: $second-color;
+}
+
+a.third-btn{
+  padding: .70rem 1.31rem;
+  background-color: transparent;
+  border: 2px solid $font-color;
+}
+
+input[type=text]{
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 
