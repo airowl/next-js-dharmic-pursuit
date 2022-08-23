@@ -5,7 +5,33 @@
 
 body{
   font-family: 'Poppins', sans-serif;
-  background-color: black;
+}
+
+a{
+  text-decoration: none;
+  /*font-size: $font-sml;*/
+  display: inline-block;
+}
+
+a.btn{
+  border-radius: 4px;
+  color: $font-color;
+}
+
+a.first-btn{
+  padding: .70rem 3.25rem;
+  /*background-color: $third-color;*/
+}
+
+a.second-btn{
+  padding: .70rem 1.31rem;
+  /*background-color: $second-color;*/
+}
+
+a.third-btn{
+  padding: .70rem 1.31rem;
+  background-color: transparent;
+  /*border: 2px solid $font-color;*/
 }
 
 /*@media (prefers-color-scheme: dark) {
