@@ -2,15 +2,15 @@ import Link from "next/link";
 
 export default function AboutUs(){
     return(
-        <section id="about-us" className="w-screen h-screen">
-            <div className="col-lg-6 col-xs-12 right-side">
+        <section id="about-us" className="w-screen h-screen md:flex md:flex-row-reverse md:grow md:items-center">
+            <div className="col-lg-6 col-xs-12 right-side md:w-1/2">
                 boxes
             </div>
-            <div className="px-10">
-                <h3 className="text-base md:text-2xl text-second text-center">
+            <div className="px-10 md:w-1/2">
+                <h3 className="text-base md:text-2xl text-second text-center md:text-left">
                     About us
                 </h3>
-                <h2 className="text-2xl font-bold text-center my-5">
+                <h2 className="text-2xl md:text-4xl font-bold text-center md:text-left my-5">
                     WELCOME! WE’RE DHARMIC PURSUIT! YOUR DAILY SOURCE OF MONEY TIPS AND VALUE INVESTING.
                 </h2>
                 <p className="text-sixth my-5">
