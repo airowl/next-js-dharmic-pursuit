@@ -7,7 +7,7 @@ export default function Hero(){
                 <h1 className="text-5xl md:text-7xl font-bold">
                     We Envision Financial Wellness
                 </h1>
-                <p className="text-base my-5">
+                <p className="text-base my-5 md:my-14">
                     With the help of our affiliate partners, we are dedicated to provide you the best financial solutions that you can get to improve your money management.
                 </p>
                 <Link href="#">
