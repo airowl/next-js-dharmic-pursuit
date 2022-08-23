@@ -15,7 +15,7 @@ a{
 
 a.btn{
   border-radius: 4px;
-  color: $font-color;
+  /*color: $font-color;*/
 }
 
 a.first-btn{
