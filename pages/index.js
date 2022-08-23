@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
 import AboutUs from '../components/about-us';
+import Tools from '../components/tools';
 
 //export async function getStaticProps(){
 //  let posts = await getPosts();
@@ -32,7 +33,7 @@ export default function Home({ posts }) {
 
         <Hero />
         <AboutUs />
-        
+        <Tools />
         <div className={styles.main}>
           {/*{
             posts.map((post,index) => (
