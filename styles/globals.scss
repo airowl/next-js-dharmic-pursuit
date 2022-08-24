@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  /*font-size: $font-sml;*/
+  display: inline-block;
+}
+
+a.btn{
+  border-radius: 4px;
+  /*color: $font-color;*/
+}
+
+a.first-btn{
+  padding: .70rem 3.25rem;
+  /*background-color: $third-color;*/
+}
+
+a.second-btn{
+  padding: .70rem 1.31rem;
+  /*background-color: $second-color;*/
+}
+
+a.third-btn{
+  padding: .70rem 1.31rem;
+  background-color: transparent;
+  /*border: 2px solid $font-color;*/
+}
+
+@-webkit-keyframes scroll {
+  0% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+
+  100% {
+  -webkit-transform: translateX(calc(-250px * 7));
+  transform: translateX(calc(-250px * 7));
+  }
+  }
+
+  @keyframes scroll {
+  0% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  100% {
+  -webkit-transform: translateX(calc(-250px * 7));
+  transform: translateX(calc(-250px * 7));
+  }
+  }
+
+  .shape-a {
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    margin: auto;
+  }
+
+  .shape-a::before, .shape-a::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 50px;
+    z-index: 2;
+  }
+
+  .shape-a::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+  }
+
+  .shape-a::before {
+    left: 0;
+    top: 0;
+  }
+
+  .shape-a .shape-b {
+    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll 35s linear infinite;
+    width: calc(250px * 14);
+  }
+
+div.shape{
+  min-width: 23.4rem;
+  height: 10.69rem;
+  border-radius: 7rem;
+  padding-left: 6rem;
+  //transform: translate3d(-800px, 0, 0); /* The image width */
+
+  //animation: slide 10s linear infinite;
+
+  &.right{
+      border-top-right-radius: 0;
+  }
+
+  &.left{
+      border-bottom-left-radius: 0;
+  }
+
+  h2{
+      font-size: 2.75rem;
+  }
+
+  p{
+      //color: $second-color;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-881px, 0, 0); /* The image width */
+  }
+}
+
+/*@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}*/
