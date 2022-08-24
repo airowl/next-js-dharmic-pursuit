@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function AboutUs(){
     return(
         <section id="about-us" className="w-screen h-screen md:flex md:flex-row-reverse md:grow md:items-center">
-            <div className="col-lg-6 col-xs-12 right-side md:w-1/2">
+            <div className="md:w-1/2">
                 boxes
             </div>
             <div className="px-10 md:w-1/2">

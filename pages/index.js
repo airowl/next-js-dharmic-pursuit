@@ -7,6 +7,8 @@ import Layout from '../components/layout';
 import Hero from '../components/hero';
 import AboutUs from '../components/about-us';
 import Tools from '../components/tools';
+import Goals from '../components/goals';
+import Blogs from '../components/blogs';
 
 //export async function getStaticProps(){
 //  let posts = await getPosts();
@@ -34,6 +36,9 @@ export default function Home({ posts }) {
         <Hero />
         <AboutUs />
         <Tools />
+        <Goals />
+        <Blogs />
+        
         <div className={styles.main}>
           {/*{
             posts.map((post,index) => (

@@ -1,0 +1,24 @@
+export default function Goals(){
+    return(
+        <section id="our-goal" className="w-screen h-screen md:flex md:flex-row-reverse md:grow md:items-center py-24">
+            <div className="px-10 md:w-1/2">
+                <h3 className="text-base md:text-2xl text-second text-center">
+                    Our Goal
+                </h3>
+                <h2 className="text-2xl md:text-4xl font-bold text-center my-5">
+                    Building A Big Community!
+                </h2>
+                <p className="text-sixth my-5">
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics
+                </p>
+                <br/>
+                <p className="text-sixth">
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics
+                </p>
+            </div>
+            <div className="md:w-1/2">
+                boxes
+            </div>
+        </section>
+    );
+}
