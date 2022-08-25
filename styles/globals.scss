@@ -33,6 +33,7 @@ a.third-btn{
   /*border: 2px solid $font-color;*/
 }
 
+// section about us per i boxes
 @-webkit-keyframes scroll {
   0% {
   -webkit-transform: translateX(0);
@@ -93,9 +94,6 @@ div.shape{
   height: 10.69rem;
   border-radius: 7rem;
   padding-left: 6rem;
-  //transform: translate3d(-800px, 0, 0); /* The image width */
-
-  //animation: slide 10s linear infinite;
 
   &.right{
       border-top-right-radius: 0;
@@ -120,6 +118,72 @@ div.shape{
   }
   100% {
     transform: translate3d(-881px, 0, 0); /* The image width */
+  }
+}
+
+// section tools dynamic boxes
+div.tool-card{
+  width: 23.38rem;
+  height: 27.75rem;
+  border-radius: .6rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20rem 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  &.dark-middle{
+      //color: $font-color;
+      //background-color: second;
+  }
+
+  &.dark{
+      //color: $font-color;
+      //background-color: $fifth-color;
+  }
+
+  div.shape-1, div.shape-2{
+      position: absolute;
+      width: 23rem;
+      height: 25rem;
+  }
+
+  div.shape-1{
+      right: 43%;
+      top: 48%;
+      z-index: 1;
+      border-radius: 45%;
+
+      &.white{
+          background: linear-gradient(107deg, rgba(white, $alpha: .05) 45%, rgba(48,41,217,0) 100%);
+      }
+  }
+
+  div.shape-2{
+      left: 10%;
+      top: 70%;
+      z-index: 0;
+      border-radius: 45%;
+      border-top-left-radius: 0;
+
+      &.white{
+          background: linear-gradient(260deg, rgba(white, $alpha: .05) 45%, rgba(48,41,217,0) 100%);
+      }
+  }
+
+  p, h3{
+      text-align: center;
+  }
+
+  div.text{
+      padding: 0 2rem;
+      height: 100%;
+  }
+
+  div.icon{
+      font-size: 4rem;
+
+      &.white{
+          color: white;
+      }
   }
 }
 

@@ -1,6 +1,6 @@
 export default function Goals(){
     return(
-        <section id="our-goal" className="w-screen h-screen md:flex md:flex-row-reverse md:grow md:items-center py-24">
+        <section id="our-goal" className="w-screen h-screen container mx-auto md:flex md:flex-row-reverse md:grow md:items-center py-24 md:py-0">
             <div className="px-10 md:w-1/2">
                 <h3 className="text-base md:text-2xl text-second text-center">
                     Our Goal

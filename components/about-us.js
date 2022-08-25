@@ -44,7 +44,7 @@ const shapeDatasMd = [
 
 export default function AboutUs(){
     return(
-        <section id="about-us" className="w-screen md:h-screen md:flex md:flex-row-reverse md:grow md:items-center pb-24">
+        <section id="about-us" className="w-screen container mx-auto md:h-screen md:flex md:flex-row-reverse md:grow md:items-center pb-24">
             <div className="shape-a md:w-1/2 overflow-hidden relative w-full">
                 <div className="shape-b flex items-center overflow-hidden md:hidden">
                     {
