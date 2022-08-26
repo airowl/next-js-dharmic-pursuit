@@ -1,21 +1,22 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const toolDatas = [
     {
-        icon: 'fa-solid fa-calendar',
+        icon: 'calendar',
         int: '#1',
         title: 'Financial Report',
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
         style: '1'
     },
     {
-        icon: 'fa-solid fa-suitcase',
+        icon: 'suitcase',
         int: '#2',
         title: 'Manage Investment',
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
         style: '2'
     },
     {
-        icon: 'fa-solid fa-chart-simple',
+        icon: 'chart-simple',
         int: '#3',
         title: 'Financial Report',
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
@@ -57,10 +58,10 @@ export default function Tools(){
                             <div className={"shape-2 bg-gradient-to-tl from-second to-[rgba(48,41,217,0)]  " + (checkStyle(e.style, 'white', 'opacity-5'))}></div>
                             <div className="text flex flex-col justify-evenly items-center">
                                 <div className="icon">
-                                    <i className={e.icon}></i>
+                                    <FontAwesomeIcon icon={["fas", `${e.icon}`]} />
                                 </div>
                                 <p>
-                                    {e.int}
+                                    {e.int} - 
                                 </p>
                                 <div className="description">
                                     <h3 className="md">
