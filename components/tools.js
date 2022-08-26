@@ -61,7 +61,7 @@ export default function Tools(){
                                     <FontAwesomeIcon icon={["fas", `${e.icon}`]} />
                                 </div>
                                 <p>
-                                    {e.int} - 
+                                    {e.int}
                                 </p>
                                 <div className="description">
                                     <h3 className="md">

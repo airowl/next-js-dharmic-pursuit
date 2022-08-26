@@ -1,6 +1,27 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+const goalCards = [
+    {
+        icon: 'gamepad',
+        text: 'Innovative Solutions'
+    },
+    {
+        icon: 'phone',
+        text: '24/7 Support'
+    },
+    {
+        icon: 'people-group',
+        text: 'Professional Team'
+    },
+];
+
+document.addEventListener('scroll', function(){
+    console.log('sto scrollando');
+});
+
 export default function Goals(){
     return(
-        <section id="our-goal" className="w-screen h-screen container mx-auto md:flex md:flex-row-reverse md:grow md:items-center py-24 md:py-0">
+        <section id="our-goal" className="w-screen md:h-screen container mx-auto md:flex md:flex-row-reverse md:grow md:items-center py-24 md:py-0">
             <div className="px-10 md:w-1/2">
                 <h3 className="text-base md:text-2xl text-second text-center">
                     Our Goal
@@ -17,7 +38,18 @@ export default function Goals(){
                 </p>
             </div>
             <div className="md:w-1/2">
-                boxes
+                {
+                    goalCards.map((e, i) => (
+                        <div className="goal-card flex flex-col justify-center items-center" key={i}>
+                            <div className="icon flex flex-col justify-center items-center bg-second text-fourth">
+                                <FontAwesomeIcon icon={["fas", `${e.icon}`]} className="i"/>
+                            </div>
+                            <h3 className="">
+                                {e.text}
+                            </h3>
+                        </div>
+                    ))
+                }
             </div>
         </section>
     );
