@@ -222,6 +222,31 @@ div.goal-card{
 
 }
 
+div.blog-card{
+  width: 23.38rem;
+  height: 36.44rem;
+  border-radius: .6rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20rem 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  .image{
+      height: 45%;
+
+      img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+      }
+  }
+
+  div.text{
+      height: 55%;
+      padding: 1rem 2rem;
+  }
+
+}
+
 /*@media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
