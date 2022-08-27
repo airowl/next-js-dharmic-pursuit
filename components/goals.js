@@ -15,10 +15,6 @@ const goalCards = [
     },
 ];
 
-document.addEventListener('scroll', function(){
-    console.log('sto scrollando');
-});
-
 export default function Goals(){
     return(
         <section id="our-goal" className="w-screen md:h-screen container mx-auto md:flex md:flex-row-reverse md:grow md:items-center py-24 md:py-0">
