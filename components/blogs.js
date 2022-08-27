@@ -35,7 +35,7 @@ export default function Blogs(){
             <div className="flex flex-wrap justify-center">
                 {
                     blogCards.map((e, i) => (
-                        <div className="blog-card bg-font mt-10 md:ml-10" key={i}>
+                        <div className="blog-card bg-font mt-10 mx-10" key={i}>
                             <div className="image">
                                 <Image src="" alt="" />
                             </div>
