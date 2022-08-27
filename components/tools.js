@@ -41,7 +41,7 @@ const getBgCard = (x, style1, style2, style3) => {
 
 export default function Tools(){
     return(
-        <section id="tools" className="w-screen container mx-auto flex flex-col items-center">
+        <section id="tools" className="w-screen md:py-72 container mx-auto flex flex-col items-center">
             <div className="">
                 <h3 className="text-base md:text-2xl text-second text-center">
                     Our Tool

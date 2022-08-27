@@ -23,7 +23,7 @@ const blogCards = [
 
 export default function Blogs(){
     return(
-        <section id="tools" className="w-screen flex flex-col items-center py-20">
+        <section id="tools" className="w-screen md:py-72 flex flex-col items-center">
             <div className="col-lg-12 col-xs-12">
                 <h3 className="text-base md:text-2xl text-second text-center">
                     Our Blogs
