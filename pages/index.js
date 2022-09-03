@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { client } from '../lib/api';
-import Link from 'next/link';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
 import AboutUs from '../components/about-us';
@@ -35,6 +34,7 @@ export async function getStaticProps(){
       query: GET_POSTS
   })
   const posts = response?.data?.posts?.nodes
+  console.log('ready');
   return {
       props: {
           posts

@@ -57,9 +57,9 @@ export default function Tools(){
                             <div className={"shape-1 bg-gradient-to-br from-second to-[rgba(48,41,217,0)]  " + (checkStyle(e.style, 'white', 'opacity-5'))}></div>
                             <div className={"shape-2 bg-gradient-to-tl from-second to-[rgba(48,41,217,0)]  " + (checkStyle(e.style, 'white', 'opacity-5'))}></div>
                             <div className="text flex flex-col justify-evenly items-center">
-                                <div className="icon">
-                                    <FontAwesomeIcon icon={["fas", `${e.icon}`]} />
-                                </div>
+                                {/*<div className="w-16">*/}
+                                    <FontAwesomeIcon className="w-16" icon={["fas", `${e.icon}`]} />
+                                {/*</div>*/}
                                 <p>
                                     {e.int}
                                 </p>

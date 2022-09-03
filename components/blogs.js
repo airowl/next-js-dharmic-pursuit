@@ -15,7 +15,6 @@ export default function Blogs({ posts }){
                 </h2>
             </div>
             <div className="flex flex-wrap justify-center">
-                {console.log(posts)}
                 {
                     posts.map((e, i) => (
                         <div className={"blog-card bg-font mt-10 mx-10 " + (i >= 3 ? "hidden" : "")} key={i}>
