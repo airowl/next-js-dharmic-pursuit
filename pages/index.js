@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import { getPosts } from '../lib/api';
+import { client } from '../lib/api';
 import Link from 'next/link';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
@@ -9,15 +9,38 @@ import AboutUs from '../components/about-us';
 import Tools from '../components/tools';
 import Goals from '../components/goals';
 import Blogs from '../components/blogs';
+import { gql } from "@apollo/client";
 
-//export async function getStaticProps(){
-//  let posts = await getPosts();
-//  return {
-//    props: {
-//      posts
-//    }
-//  }
-//}
+
+export async function getStaticProps(){
+
+  const GET_POSTS = gql`
+  query AllPosts {
+      posts {
+          nodes {
+              title
+              date
+              featuredImage {
+                node {
+                  sourceUrl
+                }
+              }
+          }
+          }
+      }
+  `;
+
+  const response = await client.query({
+      query: GET_POSTS
+  })
+  const posts = response?.data?.posts?.nodes
+  return {
+      props: {
+          posts
+      }
+  }
+}
+
 
 export const siteTitle = "Dharmic Pursut";
 
@@ -35,24 +58,8 @@ export default function Home({ posts }) {
         <AboutUs />
         <Tools />
         <Goals />
-        <Blogs />
-        
-        <div className={styles.main}>
-          {/*{
-            posts.map((post,index) => (
-              <div key={index}>
-
-                <Link href={`/posts/${post.node.id}`}>
-                <a style={{color:'blue'}}>{post.node.title}</a>
-                </Link>
-                
-                <div dangerouslySetInnerHTML={{__html:post.node.content}} />
-
-                <p>By {post.node.author.node.name}</p>
-              </div>
-            ))
-          }*/}
-        </div>
+        <Blogs posts={posts}/>
+      
     </Layout>
   )
 }

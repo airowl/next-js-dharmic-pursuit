@@ -1,4 +1,31 @@
+import { gql } from "@apollo/client";
 import Image from "next/image";
+import { client } from "../lib/api";
+import { formatDate } from "../lib/datatime";
+
+//export async function getStaticProps(){
+
+//    const GET_POSTS = gql`
+//    query AllPosts {
+//        posts {
+//            nodes {
+//                title
+//                date
+//            }
+//            }
+//        }
+//    `;
+
+//    const response = await client.query({
+//        query: GET_POSTS
+//    })
+//    const posts = response?.data?.posts?.nodes
+//    return {
+//        props: {
+//            posts
+//        }
+//    }
+//}
 
 const blogCards = [
     {
@@ -21,7 +48,7 @@ const blogCards = [
     },
 ];
 
-export default function Blogs(){
+export default function Blogs({ posts }){
     return(
         <section id="tools" className="w-screen md:py-72 flex flex-col items-center">
             <div className="col-lg-12 col-xs-12">
@@ -33,15 +60,16 @@ export default function Blogs(){
                 </h2>
             </div>
             <div className="flex flex-wrap justify-center">
+                {console.log(posts)}
                 {
-                    blogCards.map((e, i) => (
-                        <div className="blog-card bg-font mt-10 mx-10" key={i}>
+                    posts.map((e, i) => (
+                        <div className={"blog-card bg-font mt-10 mx-10 " + (i >= 3 ? "hidden" : "")} key={i}>
                             <div className="image">
-                                <Image src="" alt="" />
+                                <img src={e.featuredImage.node.sourceUrl} alt="" />
                             </div>
                             <div className="text flex flex-col justify-evenly items-start">
                                 <p className="date text-second">
-                                    {e.date}
+                                    {formatDate(e.date)}
                                 </p>
                                 <h3 className="md">
                                     {e.title}

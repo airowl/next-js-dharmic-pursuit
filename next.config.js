@@ -4,4 +4,11 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
+const images = {
+  domains: ['www.dharmicpursuit.com']
+}
+
+module.exports = {
+  nextConfig,
+  images: images
+}
