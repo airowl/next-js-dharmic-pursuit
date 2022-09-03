@@ -3,51 +3,6 @@ import Image from "next/image";
 import { client } from "../lib/api";
 import { formatDate } from "../lib/datatime";
 
-//export async function getStaticProps(){
-
-//    const GET_POSTS = gql`
-//    query AllPosts {
-//        posts {
-//            nodes {
-//                title
-//                date
-//            }
-//            }
-//        }
-//    `;
-
-//    const response = await client.query({
-//        query: GET_POSTS
-//    })
-//    const posts = response?.data?.posts?.nodes
-//    return {
-//        props: {
-//            posts
-//        }
-//    }
-//}
-
-const blogCards = [
-    {
-        date: 'January 01, 2021',
-        title: 'How to Start a Successful in 2020',
-        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
-        url: '#'
-    },
-    {
-        date: 'January 01, 2021',
-        title: 'How to Start a Successful in 2020',
-        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
-        url: '#'
-    },
-    {
-        date: 'January 01, 2021',
-        title: 'How to Start a Successful in 2020',
-        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
-        url: '#'
-    },
-];
-
 export default function Blogs({ posts }){
     return(
         <section id="tools" className="w-screen md:py-72 flex flex-col items-center">
@@ -77,7 +32,7 @@ export default function Blogs({ posts }){
                                 <p className="text-sixth">
                                     {e.description}
                                 </p>
-                                <a href="#" className="btn second-btn bg-second text-font">Read More</a>
+                                <a href={e.uri} className="btn second-btn bg-second text-font">Read More</a>
                             </div>
                         </div>
                     ))
