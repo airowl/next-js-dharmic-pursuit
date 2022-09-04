@@ -1,5 +1,6 @@
 import { gql } from "@apollo/client";
 import Image from "next/image";
+import Link from "next/link";
 import { client } from "../lib/api";
 import { formatDate } from "../lib/datatime";
 
@@ -31,7 +32,9 @@ export default function Blogs({ posts }){
                                 <p className="text-sixth">
                                     {e.description}
                                 </p>
-                                <a href={e.uri} className="btn second-btn bg-second text-font">Read More</a>
+                                <Link href={e.uri}>
+                                    <a className="btn second-btn bg-second text-font">Read More</a>
+                                </Link>
                             </div>
                         </div>
                     ))
