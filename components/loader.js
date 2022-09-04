@@ -25,7 +25,7 @@ export default function Loader() {
   })
   
   return loading && (
-    <div className={'w-screen h-screen flex justify-center items-center bg-black fixed top-0 bottom-0 left-0 right-0 ' + (styles.wrapperLoader) }>
+    <div className={'w-screen h-screen flex justify-center items-center bg-black fixed top-0 bottom-0 left-0 right-0 z-50 ' + (styles.wrapperLoader) }>
       <div className={styles.ldsEllipsis}><div></div><div></div><div></div><div></div></div>
     </div>
   )
