@@ -8,7 +8,7 @@ export default function Hero(){
                     We Envision Financial Wellness
                 </h1>
                 <p className="text-base my-5 md:my-14">
-                    With the help of our affiliate partners, we are dedicated to provide you the best financial solzutions that you can get to improve your money management.
+                    Guiding You In Value Investing And Personal Finance
                 </p>
                 <Link href="#">
                     <a className="btn first-btn bg-third">Let&apos;s Talk</a>
