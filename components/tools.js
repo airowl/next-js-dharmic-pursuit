@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const toolDatas = [
     {
         icon: 'calendar',
-        int: '#1',
-        title: 'Financial Report',
-        text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
+        int: 'Financial Planning',
+        title: '',
+        text: '"If You Fail to Plan, You are Planning to Fail". We will help you on your journey towards financial wellness.',
         style: '1'
     },
     {
@@ -44,7 +44,7 @@ export default function Tools(){
         <section id="tools" className="w-screen md:py-72 container mx-auto flex flex-col items-center">
             <div className="">
                 <h3 className="text-base md:text-2xl text-second text-center">
-                    Our Tool
+                    Our Services
                 </h3>
                 <h2 className="text-2xl md:text-4xl font-bold text-center my-5">
                     What We Offer
