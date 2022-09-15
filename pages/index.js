@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import { client } from '../lib/api';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
 import AboutUs from '../components/about-us';
 import Tools from '../components/tools';
 import Goals from '../components/goals';
 import Blogs from '../components/blogs';
+import { client } from '../lib/api';
 import { gql } from "@apollo/client";
 
 
@@ -15,7 +15,7 @@ export async function getStaticProps(){
 
   const GET_POSTS = gql`
   query AllPosts {
-      posts {
+      posts(last: 3) {
           nodes {
               title
               date
@@ -43,7 +43,7 @@ export async function getStaticProps(){
 }
 
 
-export const siteTitle = "Dharmic Pursut";
+export const siteTitle = "Dharmic Pursuit";
 
 export default function Home({ posts }) {
   return (
