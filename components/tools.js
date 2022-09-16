@@ -19,7 +19,7 @@ const toolDatas = [
         icon: 'shield',
         int: 'Protection',
         title: '',
-        text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
+        text: 'Protecting your loved ones is your responsibility. Make sure that you are perfectly insured. ',
         style: '3'
     },
 ];
