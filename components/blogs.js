@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { client } from "../lib/api";
 import { formatDate } from "../lib/datatime";
+import Button from "./button";
 
 export default function Blogs({ posts }){
     return(
@@ -34,9 +35,11 @@ export default function Blogs({ posts }){
                                 <p className="text-sixth">
                                     {e.description}
                                 </p>
-                                <Link href={e.uri}>
-                                    <a className="btn second-btn bg-second text-font">Read More</a>
-                                </Link>
+                                <Button 
+                                    text="Read More"
+                                    url={e.uri}
+                                    style="light"
+                                />
                             </div>
                         </div>
                     ))

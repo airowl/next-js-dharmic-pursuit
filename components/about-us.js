@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "./button";
 
 const shapeDatas = [
     {
@@ -88,9 +89,11 @@ export default function AboutUs(){
                     With the help of our affiliate partners, we are dedicated to provide you the best financial solutions that you can get to improve your personal finance and investing strategy.
                 </p>
                 
-                <Link href="#">
-                    <a className="btn second-btn bg-second text-white">Read About Us</a>
-                </Link>
+                <Button 
+                    text="Read About Us"
+                    url="#"
+                    style="light"
+                />
             </div>
     </section>
     );

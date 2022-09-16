@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import headerImg from '../assets/img/header-img-invest.png'
+import Button from "./button";
 
 export default function Hero(){
     return (
@@ -12,9 +13,10 @@ export default function Hero(){
                 <p className="text-xl my-5 md:text-2xl md:my-14">
                     Guiding You In Value Investing And Personal Finance
                 </p>
-                <Link href="#">
+                {/*<Link href="#">
                     <a className="btn first-btn bg-third">Let&apos;s Talk</a>
-                </Link>
+                </Link>*/}
+                <Button text="ciao" url="#" style="dark" />
             </div>
             <div className="hidden md:inline relative top-32">
                 <Image className="w-full absolute img-size" src={headerImg} alt="header img"/>

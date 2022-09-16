@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Button from "./button";
 
 
 const dataFooterStart = [
@@ -124,7 +125,11 @@ export default function Footer(){
                 <div className="newsletter flex justify-center items-center flex-wrap">
                     <input type="text" placeholder="* FirstName" className="w-full" />
                     <input type="text" placeholder="* Email" className="w-full" />
-                    <a href="#" className="btn second-btn bg-second text-font">Submit</a><br/>
+                    <Button 
+                        text="Submit"
+                        url="#"
+                        style="light"
+                    />
                 </div>
                 <div className="social mt-8">
                     Follow Us: 
