@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const toolDatas = [
     {
-        icon: 'calendar',
+        icon: 'coins',
         int: 'Financial Planning',
         title: '',
         text: '"If You Fail to Plan, You are Planning to Fail". We will help you on your journey towards financial wellness.',
@@ -19,7 +19,7 @@ const toolDatas = [
         icon: 'shield',
         int: 'Protection',
         title: '',
-        text: 'Protecting your loved ones is your responsibility. Make sure that you are perfectly insured. ',
+        text: 'Protecting your loved ones is your responsibility. Make sure that you are rightly insured. ',
         style: '3'
     },
 ];
