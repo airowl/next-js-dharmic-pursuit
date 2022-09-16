@@ -9,16 +9,16 @@ const toolDatas = [
         style: '1'
     },
     {
-        icon: 'suitcase',
-        int: '#2',
-        title: 'Manage Investment',
-        text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
+        icon: 'chart-simple',
+        int: 'Investments',
+        title: '',
+        text: 'Do not stress yourself out finding the right investment for you. We will help you find the best we think is suited for you',
         style: '2'
     },
     {
-        icon: 'chart-simple',
-        int: '#3',
-        title: 'Financial Report',
+        icon: 'shield',
+        int: 'Protection',
+        title: '',
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
         style: '3'
     },
