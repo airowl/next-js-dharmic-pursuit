@@ -17,7 +17,7 @@ export default function Hero(){
                 </Link>
             </div>
             <div className="hidden md:inline relative top-32">
-            {/*<Image className="w-full absolute img-size" src={headerImg} alt="header img"/>*/}
+                <Image className="w-full absolute img-size" src={headerImg} alt="header img"/>
             </div>
         </section>
     );
