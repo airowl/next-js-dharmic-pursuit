@@ -2,24 +2,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const toolDatas = [
     {
-        icon: 'calendar',
-        int: '#1',
-        title: 'Financial Report',
-        text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
+        icon: 'coins',
+        int: 'Financial Planning',
+        title: '',
+        text: '"If You Fail to Plan, You are Planning to Fail". We will help you on your journey towards financial wellness.',
         style: '1'
     },
     {
-        icon: 'suitcase',
-        int: '#2',
-        title: 'Manage Investment',
-        text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
+        icon: 'chart-simple',
+        int: 'Investments',
+        title: '',
+        text: 'Do not stress yourself out finding the right investment for you. We will help you find the best we think is suited for you',
         style: '2'
     },
     {
-        icon: 'chart-simple',
-        int: '#3',
-        title: 'Financial Report',
-        text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.',
+        icon: 'shield',
+        int: 'Protection',
+        title: '',
+        text: 'Protecting your loved ones is your responsibility. Make sure that you are rightly insured. ',
         style: '3'
     },
 ];
@@ -44,7 +44,7 @@ export default function Tools(){
         <section id="tools" className="w-screen md:py-72 container mx-auto flex flex-col items-center">
             <div className="">
                 <h3 className="text-base md:text-2xl text-second text-center">
-                    Our Tool
+                    Our Services
                 </h3>
                 <h2 className="text-2xl md:text-4xl font-bold text-center my-5">
                     What We Offer

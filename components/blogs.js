@@ -18,7 +18,9 @@ export default function Blogs({ posts }){
             <div className="flex flex-wrap justify-center">
                 {
                     posts.map((e, i) => (
+
                         <div className={"blog-card bg-font mt-10 mx-10"} key={i}>
+
                             <div className="image">
                                 <img src={e.featuredImage.node.sourceUrl} alt="" />
                             </div>
