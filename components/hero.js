@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import headerImg from '../assets/img/header-img-invest.png'
 
 export default function Hero(){
     return (
@@ -14,6 +16,7 @@ export default function Hero(){
                     <a className="btn first-btn bg-third">Let&apos;s Talk</a>
                 </Link>
             </div>
+            <Image src={headerImg} alt="header img"/>
         </section>
     );
 }
