@@ -1,9 +1,4 @@
-import { gql } from "@apollo/client";
-import Image from "next/image";
-import Link from "next/link";
-import { client } from "../lib/api";
-import { formatDate } from "../lib/datatime";
-import Button from "./button";
+import CardBlog from "./card-blog";
 
 export default function Blogs({ posts }){
     return(
@@ -20,28 +15,29 @@ export default function Blogs({ posts }){
                 {
                     posts.map((e, i) => (
 
-                        <div className={"blog-card bg-font mt-10 mx-10"} key={i}>
+                        //<div className={"blog-card bg-font mt-10 mx-10"} key={i}>
 
-                            <div className="image">
-                                <img src={e.featuredImage.node.sourceUrl} alt="" />
-                            </div>
-                            <div className="text flex flex-col justify-evenly items-start">
-                                <p className="date text-second">
-                                    {formatDate(e.date)}
-                                </p>
-                                <h3 className="md">
-                                    {e.title}
-                                </h3>
-                                <p className="text-sixth">
-                                    {e.description}
-                                </p>
-                                <Button 
-                                    text="Read More"
-                                    url={e.uri}
-                                    style="light"
-                                />
-                            </div>
-                        </div>
+                        //    <div className="image">
+                        //        <img src={e.featuredImage.node.sourceUrl} alt="" />
+                        //    </div>
+                        //    <div className="text flex flex-col justify-evenly items-start">
+                        //        <p className="date text-second">
+                        //            {formatDate(e.date)}
+                        //        </p>
+                        //        <h3 className="md">
+                        //            {e.title}
+                        //        </h3>
+                        //        <p className="text-sixth">
+                        //            {e.description}
+                        //        </p>
+                        //        <Button 
+                        //            text="Read More"
+                        //            url={e.uri}
+                        //            style="light"
+                        //        />
+                        //    </div>
+                        //</div>
+                        <CardBlog key={i} posts={e} />
                     ))
                 }
             </div>
