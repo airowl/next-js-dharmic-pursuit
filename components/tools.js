@@ -1,43 +1,26 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import CardTool from "./card-tool";
 
 const toolDatas = [
     {
         icon: 'coins',
-        int: 'Financial Planning',
-        title: '',
+        title: 'Financial Planning',
         text: '"If You Fail to Plan, You are Planning to Fail". We will help you on your journey towards financial wellness.',
         style: '1'
     },
     {
         icon: 'chart-simple',
-        int: 'Investments',
-        title: '',
+        title: 'Investments',
         text: 'Do not stress yourself out finding the right investment for you. We will help you find the best we think is suited for you',
         style: '2'
     },
     {
         icon: 'shield',
-        int: 'Protection',
-        title: '',
+        title: 'Protection',
         text: 'Protecting your loved ones is your responsibility. Make sure that you are rightly insured. ',
         style: '3'
     },
 ];
-
-const checkStyle = (x, style, style1) => {
-    if (x == 2 || x == 3) {
-        return style
-    } return style1
-}
-
-const getBgCard = (x, style1, style2, style3) => {
-    if (x == 2) {
-        return style1
-    } else if (x == 3) {
-        return style2
-    }
-    return style3
-}
 
 export default function Tools(){
     return(
@@ -53,26 +36,7 @@ export default function Tools(){
             <div className="md:flex md:justify-evenly md:items-center md:w-full">
                 {
                     toolDatas.map((e, i) => (
-                        <div className={"tool-card mt-8 " + (getBgCard(e.style, 'text-font bg-second', 'text-font bg-fifth', 'bg-font'))} key={i}>
-                            <div className={"shape-1 bg-gradient-to-br from-second to-[rgba(48,41,217,0)]  " + (checkStyle(e.style, 'white', 'opacity-5'))}></div>
-                            <div className={"shape-2 bg-gradient-to-tl from-second to-[rgba(48,41,217,0)]  " + (checkStyle(e.style, 'white', 'opacity-5'))}></div>
-                            <div className="text flex flex-col justify-evenly items-center">
-                                {/*<div className="w-16">*/}
-                                    <FontAwesomeIcon className="w-16" icon={["fas", `${e.icon}`]} />
-                                {/*</div>*/}
-                                <p>
-                                    {e.int}
-                                </p>
-                                <div className="description">
-                                    <h3 className="md">
-                                        {e.title}
-                                    </h3>
-                                    <p>
-                                        {e.text}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        <CardTool key={i} props={e} />
                     ))
                 }
             </div>

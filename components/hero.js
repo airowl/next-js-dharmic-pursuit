@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import headerImg from '../assets/img/header-img-invest.png'
 import Button from "./button";
+import CardTool from "./card-tool";
 
 export default function Hero(){
     return (
