@@ -17,7 +17,7 @@ export default function Hero(){
                 {/*<Link href="#">
                     <a className="btn first-btn bg-third">Let&apos;s Talk</a>
                 </Link>*/}
-                <Button text="Let's start" url="#" style="dark" />
+                <Button url="#" style="dark" >Let's start</Button>
             </div>
             <div className="hidden md:inline relative top-32">
                 <Image className="w-full absolute img-size" src={headerImg} alt="header img"/>

@@ -90,10 +90,11 @@ export default function AboutUs(){
                 </p>
                 
                 <Button 
-                    text="Read About Us"
                     url="#"
                     style="light"
-                />
+                >
+                    Read About Us
+                </Button>
             </div>
     </section>
     );

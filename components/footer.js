@@ -126,10 +126,11 @@ export default function Footer(){
                     <input type="text" placeholder="* FirstName" className="w-full" />
                     <input type="text" placeholder="* Email" className="w-full" />
                     <Button 
-                        text="Submit"
                         url="#"
                         style="light"
-                    />
+                    >
+                        Submit
+                    </Button>
                 </div>
                 <div className="social mt-8">
                     Follow Us: 

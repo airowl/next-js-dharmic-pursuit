@@ -17,7 +17,7 @@ export default function Button(props){
   return(
       <>
         <Link href={props.url}>
-          <a className={"btn " + (getBtnStyle(props.style))}>{props.text}</a>
+          <a className={"btn " + (getBtnStyle(props.style))}>{props.children}</a>
         </Link>
       </>
   );

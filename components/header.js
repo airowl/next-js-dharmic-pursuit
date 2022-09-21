@@ -21,9 +21,10 @@ export default function Header() {
                     </Link>
                     <div className="flex items-center lg:order-2">
                         <Button 
-                            text="Get started"
                             url="#"
-                        />
+                        >
+                            Get Started
+                        </Button>
                         <button
                             onClick={() => setNavbar(!navbar)}
                             data-collapse-toggle="mobile-menu-2"
