@@ -11,36 +11,36 @@ import { client } from '../lib/api';
 import { gql } from "@apollo/client";
 
 
-//export async function getStaticProps(){
+export async function getStaticProps(){
 
-//  const GET_POSTS = gql`
-//  query AllPosts {
-//      posts(last: 3) {
-//          nodes {
-//              title
-//              date
-//              uri
-//              featuredImage {
-//                node {
-//                  sourceUrl
-//                }
-//              }
-//          }
-//          }
-//      }
-//  `;
+  const GET_POSTS = gql`
+  query AllPosts {
+      posts(last: 3) {
+          nodes {
+              title
+              date
+              uri
+              featuredImage {
+                node {
+                  sourceUrl
+                }
+              }
+          }
+          }
+      }
+  `;
 
-//  const response = await client.query({
-//      query: GET_POSTS
-//  })
-//  const posts = response?.data?.posts?.nodes
-//  console.log('ready');
-//  return {
-//      props: {
-//          posts
-//      }
-//  }
-//}
+  const response = await client.query({
+      query: GET_POSTS
+  })
+  const posts = response?.data?.posts?.nodes
+  console.log('ready');
+  return {
+      props: {
+          posts
+      }
+  }
+}
 
 
 export const siteTitle = "Dharmic Pursuit";
@@ -58,7 +58,7 @@ export default function Home({ posts }) {
         <AboutUs />
         <Tools />
         <Goals />
-        {/*<Blogs posts={posts}/>*/}
+        <Blogs posts={posts}/>
       
     </Layout>
   )
