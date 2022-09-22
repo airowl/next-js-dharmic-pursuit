@@ -7,39 +7,17 @@ import AboutUs from '../components/about-us';
 import Tools from '../components/tools';
 import Goals from '../components/goals';
 import Blogs from '../components/blogs';
-import { client } from '../lib/api';
-import { gql } from "@apollo/client";
+import {getLatestPosts} from '../lib/api';
 
 
 export async function getStaticProps(){
 
-  const GET_POSTS = gql`
-  query AllPosts {
-      posts(last: 3) {
-          nodes {
-              title
-              date
-              uri
-              featuredImage {
-                node {
-                  sourceUrl
-                }
-              }
-          }
-          }
-      }
-  `;
-
-  const response = await client.query({
-      query: GET_POSTS
-  });
-
-  
-  const posts = response?.data?.posts?.nodes;
+  const latestPosts = await getLatestPosts();
+  //console.log(latestPosts);
 
   return {
       props: {
-        posts,
+        latestPosts,
       }
   }
 }
@@ -47,7 +25,7 @@ export async function getStaticProps(){
 
 export const siteTitle = "Dharmic Pursuit";
 
-export default function Home({ posts }) {
+export default function Home({ latestPosts }) {
   return (
     <Layout>
         <Head>
@@ -56,13 +34,11 @@ export default function Home({ posts }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        {console.log(posts)}
-
         <Hero />
         <AboutUs />
         <Tools />
         <Goals />
-        <Blogs posts={posts}/>
+        <Blogs posts={latestPosts}/>
       
     </Layout>
   )
