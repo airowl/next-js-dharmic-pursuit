@@ -32,7 +32,8 @@ export async function getStaticProps(){
 
   const response = await client.query({
       query: GET_POSTS
-  })
+  });
+
   const posts = response?.data?.posts?.nodes;
   const postsData = JSON.parse(JSON.stringify(posts))
 
@@ -41,7 +42,7 @@ export async function getStaticProps(){
 
   return {
       props: {
-        postsData
+        postsData,
       }
   }
 }
