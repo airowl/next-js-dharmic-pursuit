@@ -11,7 +11,7 @@ import { client } from '../lib/api';
 import { gql } from "@apollo/client";
 
 
-export async function getServerSideProps(){
+export async function getStaticProps(){
 
   const GET_POSTS = gql`
   query AllPosts {
