@@ -37,12 +37,12 @@ export async function getStaticProps(){
   const posts = response?.data?.posts?.nodes;
   const postsData = JSON.parse(JSON.stringify(posts))
 
-  console.log(postsData);
+  console.log(posts);
 
 
   return {
       props: {
-        postsData,
+        posts,
       }
   }
 }
@@ -50,7 +50,7 @@ export async function getStaticProps(){
 
 export const siteTitle = "Dharmic Pursuit";
 
-export default function Home({ postsData }) {
+export default function Home({ posts }) {
   return (
     <Layout>
         <Head>
@@ -59,13 +59,13 @@ export default function Home({ postsData }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        {console.log(postsData)}
+        {console.log(posts)}
 
         <Hero />
         <AboutUs />
         <Tools />
         <Goals />
-        <Blogs posts={postsData}/>
+        <Blogs posts={posts}/>
       
     </Layout>
   )
