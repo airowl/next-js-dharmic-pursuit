@@ -16,20 +16,3 @@ export const QUERY_ALL_POSTS = gql`
       }
   }
 `;
-
-export const QUERY_LATEST_POSTS = gql`
-  query AllPosts {
-    posts(last: 3) {
-      nodes {
-          title
-          date
-          uri
-          featuredImage {
-            node {
-              sourceUrl
-            }
-          }
-      }
-      }
-  }
-`;
