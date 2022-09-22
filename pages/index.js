@@ -58,7 +58,7 @@ export default function Home({ posts }) {
         <AboutUs />
         <Tools />
         <Goals />
-        <Blogs posts={posts}/>
+        <Blogs posts={posts ? posts : null}/>
       
     </Layout>
   )
