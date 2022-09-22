@@ -35,9 +35,11 @@ export async function getStaticProps(){
   });
 
   const posts = response?.data?.posts?.nodes;
-
-  console.log(posts);
-
+  if (!posts) {
+    return {
+      props: null,
+    }
+  }
 
   return {
       props: {
