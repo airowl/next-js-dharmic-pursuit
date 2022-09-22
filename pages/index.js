@@ -13,7 +13,13 @@ import {getLatestPosts} from '../lib/api';
 export async function getStaticProps(){
 
   const latestPosts = await getLatestPosts();
-  //console.log(latestPosts);
+  console.log(latestPosts);
+
+  if (!latestPosts) {
+    return {
+      notFound: true,
+    }
+  }
 
   return {
       props: {
