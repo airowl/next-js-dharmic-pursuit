@@ -33,11 +33,15 @@ export async function getStaticProps(){
   const response = await client.query({
       query: GET_POSTS
   })
-  const posts = response?.data?.posts?.nodes
+  const posts = response?.data?.posts?.nodes;
+  const postsData = JSON.stringify(posts)
+
   console.log('ready');
+
+
   return {
       props: {
-          posts
+        postsData
       }
   }
 }
@@ -45,7 +49,7 @@ export async function getStaticProps(){
 
 export const siteTitle = "Dharmic Pursuit";
 
-export default function Home({ posts }) {
+export default function Home({ postsData }) {
   return (
     <Layout>
         <Head>
@@ -58,7 +62,7 @@ export default function Home({ posts }) {
         <AboutUs />
         <Tools />
         <Goals />
-        <Blogs posts={posts ? posts : null}/>
+        <Blogs posts={postsData}/>
       
     </Layout>
   )
