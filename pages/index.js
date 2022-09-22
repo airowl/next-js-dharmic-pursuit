@@ -35,7 +35,7 @@ export async function getStaticProps(){
   });
 
   const posts = response?.data?.posts?.nodes;
-  const postsData = JSON.parse(JSON.stringify(posts))
+  //const postsData = JSON.parse(JSON.stringify(posts))
 
   console.log(posts);
 
