@@ -34,7 +34,8 @@ export async function getStaticProps(){
       query: GET_POSTS
   });
 
-  let posts;
+  
+  const posts = response.data.posts.nodes.map((node) => node);
 
   return {
       props: {
