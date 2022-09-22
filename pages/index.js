@@ -35,7 +35,7 @@ export async function getStaticProps(){
   });
 
   
-  const posts = response.data.posts.nodes.map((node) => node);
+  const posts = response?.data?.posts?.nodes;
 
   return {
       props: {
