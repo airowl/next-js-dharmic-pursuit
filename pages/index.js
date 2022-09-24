@@ -11,12 +11,10 @@ import { getLatestPosts } from '../lib/api';
 
 export async function getStaticProps(){
 
-  const result = await getLatestPosts();
+  //const result = await getLatestPosts();
 
   return {
-    props: {
-      result
-    }
+    props: { result: (await getLatestPosts()) ?? null }
   }
 
 }
