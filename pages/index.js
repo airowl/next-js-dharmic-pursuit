@@ -34,37 +34,10 @@ export default function Home({ posts }) {
 
 export async function getStaticProps(){
 
-  //const result = await getLatestPosts();
-  const QUERY_ALL_POSTS = gql`
-  query AllPosts {
-    posts(last: 3) {
-      nodes {
-          title
-          date
-          uri
-          featuredImage {
-            node {
-              sourceUrl
-            }
-          }
-      }
-      }
-  }
-`;
+  const result = await getLatestPosts();
 
-const API_URL = process.env.WORDPRESS_API_URL;
-
-
-  const client = new ApolloClient({
-    uri: API_URL,
-    cache: new InMemoryCache(),
-  });
-
-const response = await client.query({
-  query: QUERY_ALL_POSTS,
-});
-
-const posts = response?.data?.posts?.nodes.map((node) => node);
+  const posts = result?.data?.posts?.nodes.map((node) => node);
+  console.log(posts);
 
   return {
     props: { posts }
