@@ -7,12 +7,23 @@ import AboutUs from '../components/about-us';
 import Tools from '../components/tools';
 import Goals from '../components/goals';
 import Blogs from '../components/blogs';
+import { getLatestPosts } from '../lib/api';
 
+export async function getStaticProps(){
 
+  const result = await getLatestPosts();
+
+  return {
+    props: {
+      result
+    }
+  }
+
+}
 
 export const siteTitle = "Dharmic Pursuit";
 
-export default function Home({  }) {
+export default function Home({ result }) {
   return (
     <Layout>
         <Head>
@@ -25,7 +36,7 @@ export default function Home({  }) {
         <AboutUs />
         <Tools />
         <Goals />
-        {/*<Blogs posts={latestPosts}/>*/}
+        <Blogs posts={result}/>
       
     </Layout>
   )
