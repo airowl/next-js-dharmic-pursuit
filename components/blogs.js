@@ -25,7 +25,10 @@ export default function Blogs({ posts }){
             </div>
             <div className="flex flex-wrap justify-center">
                 {
-                    checkResult(posts)
+                    //checkResult(posts)
+                    posts.map((e, i) => (
+                        <CardBlog key={i} posts={e} />
+                    ))
                 }
             </div>
         </section>

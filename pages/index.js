@@ -8,10 +8,12 @@ import Tools from '../components/tools';
 import Goals from '../components/goals';
 import Blogs from '../components/blogs';
 import { getLatestPosts } from '../lib/api';
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+
 
 export const siteTitle = "Dharmic Pursuit";
 
-export default function Home({ result }) {
+export default function Home({ posts }) {
   return (
     <Layout>
         <Head>
@@ -24,7 +26,7 @@ export default function Home({ result }) {
         <AboutUs />
         <Tools />
         <Goals />
-        <Blogs posts={result}/>
+        <Blogs posts={posts}/>
       
     </Layout>
   )
@@ -33,9 +35,39 @@ export default function Home({ result }) {
 export async function getStaticProps(){
 
   //const result = await getLatestPosts();
+  const QUERY_ALL_POSTS = gql`
+  query AllPosts {
+    posts(last: 3) {
+      nodes {
+          title
+          date
+          uri
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+      }
+      }
+  }
+`;
+
+const API_URL = process.env.WORDPRESS_API_URL;
+
+
+  const client = new ApolloClient({
+    uri: API_URL,
+    cache: new InMemoryCache(),
+  });
+
+const response = await client.query({
+  query: QUERY_ALL_POSTS,
+});
+
+const posts = response?.data?.posts?.nodes.map((node) => node);
 
   return {
-    props: { result: (await getLatestPosts()) ?? null }
+    props: { posts }
   }
 
 }
