@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 import Layout from "../components/layout";
-import { client } from "../lib/api";
+import { client, getSinglePostByURI } from "../lib/api";
 import { formatDate } from "../lib/datatime";
 
 export async function getStaticPaths(){
@@ -13,29 +13,9 @@ export async function getStaticPaths(){
 
 export async function getStaticProps({ params }){
 
-  const GET_POST = gql`
-  query GetSinglePostByURI($id: ID!) {
-    post(id: $id, idType: URI) {
-      uri
-      title
-      content
-      date
-      featuredImage {
-        node {
-          sourceUrl
-        }
-      }
-    }
-  }
-  `
+  const result = await getSinglePostByURI(params.uri);
+  const post = result?.data?.post
 
-  const response = await client.query({
-    query: GET_POST,
-    variables: {
-      id: params.uri
-    }
-  });
-  const post = response?.data?.post
   return {
     props: {
       post

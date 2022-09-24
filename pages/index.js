@@ -37,7 +37,6 @@ export async function getStaticProps(){
   const result = await getLatestPosts();
 
   const posts = result?.data?.posts?.nodes.map((node) => node);
-  console.log(posts);
 
   return {
     props: { posts }
