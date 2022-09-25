@@ -1,10 +1,10 @@
 import Layout from "../components/layout";
 
-export default function AboutUs(){
+export default function Philosopy(){
     return (
         <Layout>
             <section>
-                Sono about us
+                Sono Philosopy
             </section>
         </Layout>
     );

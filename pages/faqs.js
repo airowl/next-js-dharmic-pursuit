@@ -1,10 +1,10 @@
 import Layout from "../components/layout";
 
-export default function Goals(){
+export default function Faqs(){
     return (
         <Layout>
             <section>
-                Sono Goals
+                Sono FAQs
             </section>
         </Layout>
     );
