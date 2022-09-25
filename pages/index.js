@@ -9,6 +9,8 @@ import Goals from '../components/goals';
 import Blogs from '../components/blogs';
 import { getLatestPosts } from '../lib/api';
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import Quote from '../components/quote';
+import Heading from '../components/heading';
 
 
 export const siteTitle = "Dharmic Pursuit";
@@ -23,8 +25,10 @@ export default function Home({ posts }) {
         </Head>
 
         <Hero />
-        <AboutUs />
+        {/*<AboutUs />*/}
         <Tools />
+        {/*<Quote />*/}
+        <Heading light={true}/>
         <Goals />
         <Blogs posts={posts}/>
       
